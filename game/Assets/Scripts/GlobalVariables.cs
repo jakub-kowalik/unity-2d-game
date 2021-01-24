@@ -12,7 +12,7 @@ public static class GlobalVariables
     public static string PlayerName = "Player";
 
     public static float volume = 1;
-    public static int amountOfLevels = 1;
+    public static int amountOfLevels = 2;
     public static string serverUri = "http://localhost:53198";
 
     internal static void resetValues()

@@ -9,14 +9,14 @@ public class MenuPopUp : MonoBehaviour
 {
     public Button backToGameButton;
     public Button goToOptionsPopUPButton;
-    GameObject optionsMenu;
     public Button openMenuPopUpButton;
     public Button gotToMainMenuButton;
+    [SerializeField]
+    GameObject optionsMenu;
 
 
     void Start()
     {
-        optionsMenu = GameObject.Find("optionsPopUp");
 
         backToGameButton = GameObject.Find("resumeGameButton").GetComponent<Button>();
         backToGameButton.onClick.AddListener(() => CloseMenu());

@@ -53,23 +53,28 @@ public class UIelementsInResultScene : MonoBehaviour
         gamestats.points = GlobalVariables.Score;
         string json = JsonUtility.ToJson(gamestats);
 
+        updateTableLocally(gamestats);
         RequestHandler postScore = new RequestHandler(this, RequestHandler.postYourScore(GlobalVariables.serverUri + "/GameStats/Create", json));
         yield return postScore.coroutine; 
 
-        updateTableLocally(gamestats);
+       
     }
 
     public void updateTableLocally(GameStats.GameStats statsToAdd)
     {
         var allStats = LeaderboardManager.getAllLocalGameStats();
 
-        for ( int i = 0; i < allStats.Count; i++ )
+        if (allStats.Count == 0) allStats.Insert(0, statsToAdd);
+        else
         {
-            if(allStats[i].points <= statsToAdd.points)
+            for (int i = 0; i < allStats.Count; i++)
             {
-                allStats.Insert(i, statsToAdd);
-                allStats.RemoveAt(allStats.Count - 1);
-                break;
+                if (allStats[i].points <= statsToAdd.points)
+                {
+                    allStats.Insert(i, statsToAdd);
+                    allStats.RemoveAt(allStats.Count - 1);
+                    break;
+                }
             }
         }
         LeaderboardManager.populateList(allStats.ToArray());

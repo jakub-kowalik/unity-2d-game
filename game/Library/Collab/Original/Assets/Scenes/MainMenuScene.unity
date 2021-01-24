@@ -1489,6 +1489,7 @@ GameObject:
   - component: {fileID: 425200606}
   - component: {fileID: 425200605}
   - component: {fileID: 425200604}
+  - component: {fileID: 425200607}
   m_Layer: 5
   m_Name: listScrollbar
   m_TagString: Untagged
@@ -1559,8 +1560,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 85782950}
   m_HandleRect: {fileID: 803643449}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.6546873
+  m_Value: 0.5000001
+  m_Size: 0.65468717
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1603,6 +1604,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425200602}
   m_CullTransparentMesh: 1
+--- !u!114 &425200607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425200602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de5fc9842db83f49954461d2c4a8547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &442723260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,7 +2730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -18.819542}
+  m_AnchoredPosition: {x: 0, y: -0.0000038146973}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &783296486
@@ -7181,7 +7194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SETTINGS
+  m_Text: 'LEADERBOARD
 
 '
 --- !u!1 &2471727062032006508
@@ -7383,7 +7396,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.20000076}
-  m_SizeDelta: {x: 152.6649, y: 23.050846}
+  m_SizeDelta: {x: 220, y: 23.050846}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2471727062290287487
 MonoBehaviour:
